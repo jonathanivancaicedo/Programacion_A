@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Práctica 6</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>	
+	<script src="angular/angular_resource.js"></script>
+	<script src="js/practica6.js"></script>
+</head>
+<body>
+	<div ng-app="app">
+		<div ng-controller="controlador">
+			<div ng-repeat="data in datos">
+				<p>{{data.nombre}}</p><br>
+				<p>{{data.apellido}}</p>
+			</div>			
+		</div>		
+	</div>	
+</body>
+</html>

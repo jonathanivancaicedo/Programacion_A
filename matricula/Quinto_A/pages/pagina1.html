@@ -1,0 +1,20 @@
+<body ng-app="app">
+	{{"Hola 5to A"}}
+	<div>
+		<label>Nombre:</label>
+		<input type="text" name="nombres" ng-model="nombresAngular"></input> <!--remplaza al name de input --><br>
+		<label>Tú estas ingresando el nombre: {{nombresAngular}}</label> <!--Imprime el ng-model--><br>
+
+
+		<label>Apellido:</label>
+		<input type="text" ng-model="apellidosAngular"></input> <br>
+		<label>Tú estas ingresando el apellido: {{apellidosAngular}}</label> <br>
+
+		<label>Cedula:</label>
+		<input type="text" ng-model="cedulaAngular"></input> <br>
+		<label>Tú estas ingresando la cedula: {{cedulaAngular}}</label><br>
+
+
+		<br><label>Estas ingresando el nombre : {{nombresAngular}} <br>con apellido : {{apellidosAngular}} <br>su numero de cedula es {{cedulaAngular}}</label>
+	</div>
+</body>

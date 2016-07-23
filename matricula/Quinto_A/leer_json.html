@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Práctica 7</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>	
+	<script src="angular/angular_resource.js"></script>
+	<script src="js/leer_json.js"></script>
+</head>
+<body>
+	<div ng-app="app">
+		<div ng-controller="controlador">
+		<input type="text" name="buscaNombre" ng-model="busqueda" placeholder="Buscar...">
+			<table class="table table-striped">
+				<tr>
+					<td><a href="" ng-click="ordenar('name')">Nombre</a></td>
+					<td><a href="" ng-click="ordenar('author')">Autor</a></td>
+					<td>Precio</td>
+					<td>Cantidad</td>
+					<td>Url</td>
+					<td colspan="12">Ventas por mes</td>
+				</tr>
+				<tr ng-repeat="data in datos.books | orderBy:filtro | filter:busqueda" >
+					<td>{{data.name}}</td>
+					<td>{{data.author}}</td>
+					<td>{{data.price}}</td>
+					<td>{{data.amount}}</td>
+					<td><img src="{{data.url}}" class="col-lg-2"></td>
+					<td ng-repeat="meses in data.salesPerMonth">
+						{{meses.month}}<br>
+						{{meses.amount}}
+					</td>	
+					<td>
+					</td>				
+				</tr>	
+			</table>
+		</div>		
+	</div>	
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src='angular/angular.min.js'></script>
+	<script src='angular/angular-resource.js'></script>
+	<script src='js/practica13.js'></script>
+</head>
+<body>
+	<div ng-controller="">
+		<table>
+			<tr>
+				<th>Materia</th>
+				<th>Cupos</th>
+				<th>Opcion</th>
+			</tr>
+			<tr ng-repeat="mate in materias">
+				<td>{{mate.nombreMate}}</td>
+				<td>{{mate.cupos}}</td>
+				<td><input type="submit" value='Matricularse'></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

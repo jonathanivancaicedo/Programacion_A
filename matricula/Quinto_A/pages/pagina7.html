@@ -1,0 +1,23 @@
+<body ng-app="app">
+	<div ng-controller="controlador7">
+		<div class="well">
+			<input type="text" name="buscaNombre" ng-model="busqueda" placeholder="Buscar..."></div>
+			<table  class="table table-striped">
+				<tr>
+					<td>Cedula</td>
+					<td>Nombres</td>
+					<td>Apellidos</td>
+					<td>Telefono</td>
+					<td>Materia</td>
+				</tr>				
+				<tr ng-repeat="fila in lista | filter:busqueda">
+					<td>{{fila.cedula}}</td><br>
+					<td>{{fila.nombres}}</td>
+					<td>{{fila.apellidos}}</td>
+					<td>{{fila.telefono}}</td>	
+					<td>{{fila.materia}}</td>				
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>

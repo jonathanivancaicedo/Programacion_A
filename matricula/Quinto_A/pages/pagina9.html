@@ -1,0 +1,19 @@
+	<link rel="stylesheet" href="/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+ <div ng-controller="controlador9">
+ 	<input type="text" name="buscaNombre" ng-model="busqueda" placeholder="Buscar..">
+ 	<table class="panel panel-default">
+ 		<tr>
+ 		<td>Cedula</td>
+ 		<td>Nombres</td>
+ 		<td>Apellidos</td>
+ 		<td>Telefono</td>
+ 		</tr>
+
+
+ 		<tr ng-repeat="fila in datos | filter:busqueda">
+ 		<td>{{fila.cedula}}</td>
+ 		<td>{{fila.nombres}}</td>
+ 		<td>{{fila.apellidos}}</td>
+ 		<td>{{fila.telefono}}</td>
+ 	</tr>	
+ </div>

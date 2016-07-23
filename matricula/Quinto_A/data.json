@@ -1,0 +1,35 @@
+[
+	{
+		"cedula":"1105059313",
+		"nombres":"Jonathan",
+		"apellidos":"Caicedo",
+		"telefono":"0986538237",
+		"materia":[{
+					"nombre":"Programacion Avanzada",
+					"Creditos":""
+					}
+
+					]
+	 },
+	 {
+	 	"cedula":"1478252369",
+		"nombres":"Valeria",
+		"apellidos":"Romero",
+		"telefono":"014785237",
+		"materia":"Aplicacion Web"
+	 },
+	 {
+	 	"cedula":"1105059313",
+		"nombres":"Pepito",
+		"apellidos":"Perez",
+		"telefono":"0969696969",
+		"materia":"Contabilidad"
+	 },
+	 {
+	 	"cedula":"1875542302",
+		"nombres":"Heiddy",
+		"apellidos":"Espinoza",
+		"telefono":"0879622010",
+		"materia":"Arquitectura de computadoras"
+	 }
+]

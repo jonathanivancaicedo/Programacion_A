@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Controladores</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-resource.min.js"></script>
+	<script src="js/practica10.js"></script>
+	
+</head>
+<body ng-app="app">
+ 	<input type="text" name="buscarNombre" ng-model="busqueda">
+	<div ng-controller="controlador">
+		<table class="table table-bordered" >
+			<tr filter:busqueda">
+				<td><a ng-click="ordenar('name')" >Nombre</a></td>
+				<td><a ng-click="ordenar('author')" >Autor</a></td>
+				<td>Precio</td>
+				<td>Cantidad</td>
+				<td>Libro</td>
+				<td colspan="12">Ventas por mes</td>
+			</tr>
+			<tr ng-repeat="libros in datos.books | filter:busqueda | orderBy: ordenado">
+				<td>{{libros.name}}</td>
+				<td>{{libros.author}}</td>
+				<td>{{libros.price}}</td>
+				<td>{{libros.amount}}</td>
+				<td><img src="{{libros.url}}" class="img-rounded" width="20%" height="20%"></td>
+				<td ng-repeat="mes in libros.salesPerMonth" >
+					{{mes.month}}<br>
+					{{mes.amount}}
+				</td>
+			</tr>	
+		</table>
+		
+	</div>
+	
+
+</body>
+</html>

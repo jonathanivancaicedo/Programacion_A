@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Práctica 3</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+	<script src="js/practica3.js"></script>
+</head>
+<body>
+	<div ng-app="app">
+		<div ng-controller="controlador">
+			<form ng-submit="agregarNombre()">
+				<input type="text" name="nombres" ng-model="txtNombre">
+				<input type="submit" value="Agregar">
+			</form>
+			<button ng-click="eliminarLista()">Eliminar</button>
+			<div ng-repeat="fila in diccionario">
+				{{fila.nombres}}<br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

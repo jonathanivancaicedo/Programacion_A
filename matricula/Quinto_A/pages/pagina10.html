@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/bootstrap-3.3.6-dist/css/bootstrap.min.css"  />
+<body>
+	<div ng-app="app">
+		<div ng-controller="controlador10">
+		<input type="text" name="buscaNombre" ng-model="busqueda" placeholder="Buscar...">
+			<table class="table table-striped">
+				<tr>
+					<td><a href="" ng-click="ordenar('name')">Nombre</a></td>
+					<td><a href="" ng-click="ordenar('author')">Autor</a></td>
+					<td>Precio</td>
+					<td>Cantidad</td>
+					<td>Libro</td>
+					<td colspan="12">Ventas por mes</td>
+				</tr>
+				<tr ng-repeat="data in datos.books | orderBy:filtro | filter:busqueda" >
+					<td>{{data.name}}</td>
+					<td>{{data.author}}</td>
+					<td>{{data.price}}</td>
+					<td>{{data.amount}}</td>
+					<td><img src="{{data.url}}"  width="50%"></td>
+					<td ng-repeat="meses in data.salesPerMonth">
+						{{meses.month}}<br>
+						{{meses.amount}}
+					</td>	
+					<td>
+					</td>				
+				</tr>	
+			</table>
+		</div>		
+	</div>	
+</body>

@@ -1,0 +1,29 @@
+﻿[
+	{
+        "cedula":"1105059313",
+		"nombres":"Jonathan",
+		"apellidos":"Caicedo",
+		"telefono":"0984626558",
+		"materia":"Programación Avanzada"
+	},
+ 	{
+ 		"cedula":"1105059313",
+ 		"nombres":"Vanessa",
+ 		"apellidos":"Brown",
+		"telefono":"98765412",
+		"materia":"Aplicacion Web"
+    },
+    {
+		"cedula":"789456142",	
+		"nombres":"Luz",
+		"apellidos":"Ponton",
+		"telefono":"546123978",
+		"materia":"Contabilidad"
+	},
+    {
+    	"cedula":"789456312",
+    	"nombres":"Maria",
+    	"apellidos":"Ojeda ",
+		"telefono":"531264897",
+		"materia":"Arquitectura Computadoras"}
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css"  />
+    <script src="angular/angular.min.js"></script>
+    <script src="angular/angular-route.js"></script>
+    <script src="angular/angular-resource.js"></script>
+    <script src="js/practica8.js"></script> 
+<body ng-app='app'>
+  <header>
+  <div class="panel panel-default">
+    <h1>MENU</h1>
+    <nav class="navbar navbar-default" role='navigation'>
+    <div class="container-fluid"></div>
+      <ul>
+        <li><a href="#/p2">Practica 2</a></li>
+        <li><a href="#/p3">Practica 3</a></li>
+        <li><a href="#/p4">Practica 4</a></li>
+        <li><a href="#/p5">Practica 5</a></li>
+        <li><a href="#/p6">Practica 6</a></li>
+        <li><a href="#/p7">Practica 7</a></li>
+        <li><a href="#/p9">Practica 9</a></li>
+        <li><a href="#/p10">Practica 10</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+  <!-- Aquí inyectamos las vistas -->
+    <div ng-view></div>
+  </div>
+
+  
+  
+</body>
+</html>

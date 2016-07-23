@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Práctica 4</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="angular/angular.min.js"></script>
+	<script src="js/practica4.js"></script>
+</head>
+<body ng-app="app">
+	<div ng-controller="controlador">
+		<div class="well">
+			<form ng-submit="agregarEstudiante()">
+				<input type="text" name="nombres" placeholder="Nombres y apellidos" ng-model="txtNombre">
+				<input type="text" name="telefono" placeholder="Telefono" ng-model="txtTelefono">
+				<select name="materias" ng-model="txtMateria">
+					<option>Programación Avanzada</option>
+					<option>Arquitectura</option>
+					<option>Etica</option>
+					<option>Contabilidad</option>			
+				</select>
+				<input type="submit" value="Agregar">		
+			</form>
+		</div>		
+		<input type="text" name="buscaNombre" ng-model="busqueda">
+		<table class="table table-striped">		
+			<tr>
+				<td><a href="" ng-click="ordenar('nombres')">Nombres</a></td>
+				<td>Telefono</td>
+				<td><a href="" ng-click="ordenar('materia')">Materia</a></td>
+				<td>Opciones</td>
+			</tr>
+			<tr ng-repeat="fila in diccionario | orderBy:filtro | filter:busqueda">
+				<td>{{fila.nombres | uppercase}}</td>
+				<td>{{fila.telefono}}</td>
+				<td>{{fila.materia | uppercase}}</td>
+				<td>Opciones</td>
+			</tr>		
+		</table>
+	</div>	
+</body>
+</html>
